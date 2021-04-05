@@ -49,3 +49,44 @@ npm run typeorm:addmigration "your-migration-name"
 ```
 
 Check [TypeORM website](https://github.com/typeorm/typeorm/blob/master/docs/migrations.md) for further info
+
+## API documentation
+
+### Register
+
+#### POST /users
+
+```javascript
+{
+	"email": strin
+	"name": string,
+	"password": string
+}
+```
+
+#### POST /auth/login
+
+```javascript
+{
+	"email": strin
+	"password": string
+}
+```
+
+Response includes generated JWT token
+
+#### GET /users/profile
+
+Add login (JWT) token to auth headers (`token`)
+Response includes profile information.
+
+#### POST /messages
+
+```javascript
+{
+	"receiverId": int
+	"message": string
+}
+```
+
+Add login (JWT) token to auth headers (`token`). Send message to user identified by `receiverId`.
