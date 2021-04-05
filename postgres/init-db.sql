@@ -1,1 +1,1 @@
-CREATE DATABASE nest-test
+CREATE DATABASE nest_test

@@ -1,3 +1,7 @@
+NestJS backend with user registration and login handling using JWT tokens. Ready to deploy to Heroku.
+
+Build step will create ormconfig from environment variables (DATABASE_URL) or default config which will be used to connect to a database.
+
 ## Installation
 
 ```bash
