@@ -1,0 +1,7 @@
+{
+  "type": "postgres",
+  "url": "postgresql://postgres:password@localhost:5433/nest-test",
+  "entities": ["dist/**/models/*.entity.js"],
+  "migrations": ["dist/postgres/migration/*.js"],
+  "cli": { "migrationsDir": "postgres/migration/" }
+}
