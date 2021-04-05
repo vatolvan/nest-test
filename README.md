@@ -8,6 +8,32 @@ Build step will create ormconfig from environment variables (DATABASE_URL) or de
 $ npm install
 ```
 
+### Database
+
+Project includes `docker-compose` for starting postgres container for easier start. Navigate to `postgres` folder and start the container with
+
+```bash
+docker-compose up -d
+```
+
+Database is run on post 5433 as opposed to default postgres port of 5432. Run the database migrations before trying to start up the app.
+
+### Database migrations
+
+Run database migrations with
+
+```bash
+npm run migrations:run
+```
+
+Add new DB migrations with
+
+```bash
+npm run typeorm:addmigration "your-migration-name"
+```
+
+Check [TypeORM website](https://github.com/typeorm/typeorm/blob/master/docs/migrations.md) for further info
+
 ## Running the app
 
 ```bash
@@ -33,22 +59,6 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
-
-## DB migrations
-
-Run database migrations with
-
-```bash
-npm run migrations:run
-```
-
-Add new DB migrations with
-
-```bash
-npm run typeorm:addmigration "your-migration-name"
-```
-
-Check [TypeORM website](https://github.com/typeorm/typeorm/blob/master/docs/migrations.md) for further info
 
 ## API documentation
 
